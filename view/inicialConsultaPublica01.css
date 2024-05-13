@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+#rfb-main-container {
+    max-width: 750px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #003366;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.caixaRecuada {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.tituloFormConsulta {
+    color: #003366;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.input-field {
+    flex-basis: 45%;
+    margin-bottom: 20px;
+}
+
+.input-field label {
+    display: block;
+    color: #003366;
+    margin-bottom: 5px;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.aviso {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.botoes {
+    background-color: #003366;
+    color: #fff;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+	padding-bottom: 30px;
+	padding-left: 10px;
+	padding-right: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    font-size: 16px;
+    margin: 8px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+.quadroAviso {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 5px;
+    color: #666;
+    font-size: 14px;
+}

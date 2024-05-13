@@ -1,0 +1,48 @@
+:root {
+
+    --color-primary: #1351b4;
+    --color-primary-pastel-1: #dbe8fb;
+    --color-primary-pastel-2: #c5d4eb;
+    --color-primary-lighten-1: #5992ed;
+    --color-primary-lighten-2: #2670e8;
+    --color-primary-darken-1: #0c326f;
+    --color-primary-darken-2: #071d41;
+    --color-primary-darken-3: #04132a;
+  
+  
+    --color-secondary: #268744;
+  
+  
+    --color-success: #168821;
+    --color-warning: #fffae6;
+    --color-danger: #ffe3e3;
+    --color-info: #155bcb;
+  
+  
+    --color-brown: #a26739;
+    --color-teal: #36a191;
+    --color-yellow: #f2e317;
+    --color-orange: #d84800;
+  
+  
+    --color-white: #fff;
+    --color-gray-1: #f8f8f8;
+    --color-gray-2: #ededed;
+    --color-gray-3: #ccc;
+    --color-gray-4: #9e9d9d;
+    --color-gray-5: #888;
+    --color-gray-6: #555;
+    --color-gray-7: #333;
+    --color-black: #000;
+  
+  
+    --color-facebook: #3b5998;
+    --color-google-plus: #db4a39;
+    --color-linkedin: #0e76a8;
+    --color-twitter: #00acee;
+    --color-whatsapp: #25d366;
+    --color-xbox: #9bc848;
+    --color-yahoo: #720e9e;
+    --color-youtube: #c4302b;
+  }
+  

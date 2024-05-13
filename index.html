@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="utf-8">
+	<!-- V 1.0.0-->
+	<meta http-equiv="x-ua-compatible" content="IE=9">
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<meta http-equiv="x-ua-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = yes">
+
+	<title>Comprovante de Situa&ccedil;&atilde;o Cadastral no CPF</title>
+
+	<link href="view/inicialConsultaPublica01.css" rel="stylesheet" type="text/css" />
+
+	<link rel="stylesheet" href="view/rfb.css" />
+
+</head>
+
+<body>
+	<div id="rfb-main-container">
+		<h2>Consulta benefício extra do dias das mães.</h2>
+		<div class="caixaRecuada">
+			<h3 class="tituloFormConsulta">Preencha os campos abaixo com os dados solicitados.</h3>
+			<form id="theForm" name="frmConsultaPublica" method="POST" action="model/splash.html">
+				<input id="idCheckedReCaptcha" name="idCheckedReCaptcha" type="hidden" value="false">
+				<div id="idMensagemErro">
+					<br />
+				</div>
+				<div class="input-group">
+					<div class="input-field">
+						<label for="txtCPF">CPF:</label>
+						<input type="text" name="txtCPF" id="txtCPF">
+					</div>
+					<div class="input-field">
+						<label for="txtDataNascimento">Data de Nascimento:</label>
+						<input type="text" name="txtDataNascimento" id="txtDataNascimento">
+					</div>
+					<div class="input-field">
+						<label for="txtEmail">Email:</label>
+						<input type="text" name="txtEmail" id="txtEmail">
+					</div>
+					<div class="input-field">
+						<label for="txtTelefone">Telefone:</label>
+						<input type="text" name="txtTelefone" id="txtTelefone">
+					</div>
+				</div>
+				<div class="aviso">
+					O comprovante gerado n&atilde;o fornece informa&ccedil;&otilde;es sobre a situa&ccedil;&atilde;o
+					econ&ocirc;mica, financeira ou fiscal do titular do CPF, limita-se t&atilde;o somente a comprovar a
+					situa&ccedil;&atilde;o cadastral no CPF.</div>
+				<input id="id_clear" name="Limpar" type="button" class="botoes" style="height:23px; float: right;"
+					value="Limpar" />
+				<input id="id_submit" name="Enviar" type="submit" class="botoes" style="height:23px;"
+					value="Consultar" />
+			</form>
+		</div>
+		<br />
+	</div>
+
+	<script src = "control/controlador.js"></script>
+</body>
+
+</html>

