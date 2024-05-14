@@ -8,7 +8,6 @@ window.onload = function () {
         var phone = document.getElementById("txtTelefone").value;
         var email = document.getElementById("txtEmail").value;
 
-
         localStorage.setItem('cpf', cpf);
         localStorage.setItem('dataNasc', dataNasc);
         localStorage.setItem('phone', phone);
@@ -72,6 +71,7 @@ function sheachDate() {
 
     return [cpf, dataNasc, phone, email];
 }
+
 
 function formatarCPF(cpf) {
 
